@@ -7,14 +7,20 @@
 	
 	<bean id="categoryByName" class="com.assignment1.common.Category" autowire="byName">
 	</bean> 
+	
+	
 	<bean id="categoryByType" class="com.assignment1.common.Category" autowire="byType">
 		<property name="id" value="1"/>
 		<property name="name" value="poetry"/>
 	</bean>
-	<bean id="categoryByConstructor" class="com.assignment1.common.Category" autowire="constructor">
-		<property name="id" value="1"/>
+	
+	
+	<bean id="categoryByConstructor" class="com.assignment1.common.CategoryWithConstructor" autowire="constructor">
+		<property name="id" value="424161865311"/>
 		<property name="name" value="poetry"/>
 	</bean>
+	
+	
 	<bean id="categoryBySetterInjection" class="com.assignment1.common.CategoryWithSetterInjection">
 	</bean>
 	
@@ -25,5 +31,7 @@
    			<property name="price" value="15.00"/>
    		</bean>
 
+
+		
 	
 </beans>

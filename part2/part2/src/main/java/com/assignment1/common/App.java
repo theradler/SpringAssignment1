@@ -9,8 +9,8 @@ public class App
     	ApplicationContext context = new ClassPathXmlApplicationContext("application-context.xml");
         Category categoryByName = (Category)context.getBean("categoryByName"); 
         Category categoryByType = (Category)context.getBean("categoryByType");
-        Category categoryByConstructor = (Category)context.getBean("categoryByConstructor"); 
-        Category categoryBySetterInjection = (Category)context.getBean("categoryBySetterInjection");
+        CategoryWithConstructor categoryByConstructor = (CategoryWithConstructor)context.getBean("categoryByConstructor"); 
+        CategoryWithSetterInjection categoryBySetterInjection = (CategoryWithSetterInjection)context.getBean("categoryBySetterInjection");
         System.out.println("Hello Wolrd");
     }
 }

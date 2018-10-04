@@ -1,5 +1,4 @@
 package com.assignment1.common;
-
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class CategoryWithConstructor {
@@ -9,10 +8,8 @@ public class CategoryWithConstructor {
 	public String name;
     public Book book;
 
-    public CategoryWithConstructor(Long id, String name, Book book) {
-    	this.id = id;
-    	this.name = name;
-    	this.book = book;
+    public CategoryWithConstructor(Book book) {
+       	this.book = book;
     }
 	public void setId(Long id) {
 		this.id = id; 
