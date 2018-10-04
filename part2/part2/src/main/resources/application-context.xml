@@ -1,0 +1,29 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	
+    <bean class ="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+	
+	<bean id="categoryByName" class="com.assignment1.common.Category" autowire="byName">
+	</bean> 
+	<bean id="categoryByType" class="com.assignment1.common.Category" autowire="byType">
+		<property name="id" value="1"/>
+		<property name="name" value="poetry"/>
+	</bean>
+	<bean id="categoryByConstructor" class="com.assignment1.common.Category" autowire="constructor">
+		<property name="id" value="1"/>
+		<property name="name" value="poetry"/>
+	</bean>
+	<bean id="categoryBySetterInjection" class="com.assignment1.common.CategoryWithSetterInjection">
+	</bean>
+	
+	   <bean id="bookWhitman" class="com.assignment1.common.Book">
+   			<property name="id" value="1"/>
+   			<property name="isbn" value="9781338299151"/>
+   			<property name="title" value="Leaves of Grass"/>
+   			<property name="price" value="15.00"/>
+   		</bean>
+
+	
+</beans>

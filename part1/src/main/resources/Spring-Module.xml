@@ -1,0 +1,58 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="helloBean" class="com.assignment1.common.HelloWorld">
+		<property name="name" value="Robert"/>
+	</bean>
+   <bean id="collection" class="com.assignment1.common.Collection">
+   		 <property name="bookList">
+   		 	<list>
+   		 		<ref bean="book1"/>
+   		 		<ref bean="book2"/>
+   		 	</list>
+   		 </property>
+   		 <property name="bookMap">
+   		 	<map>
+   		 		<entry key="0" value-ref="book1"/>
+   		 		<entry key="1" value-ref="book2"/>
+   		 	</map>   		 
+   		 </property>
+   		 <property name="bookSet">
+   		 	<set>
+   		 		   <bean class="com.assignment1.common.Book">
+   						<property name="id" value="1"/>
+   						<property name="isbn" value="0553212257"/>
+   						<property name="title" value="The Sea Wolf"/>
+   						<property name="price" value="4.95"/>
+  	 			  </bean>
+   		 		 <bean class="com.assignment1.common.Book">
+   						<property name="id" value="2"/>
+   						<property name="isbn" value="9781338299151"/>
+   						<property name="title" value="Harry Potter and the Chamber of Secrets"/>
+   						<property name="price" value="10.39"/>
+  				 </bean>
+   		 	</set>
+   		 </property>
+
+   
+   </bean>
+   
+   <bean id="book1" class="com.assignment1.common.Book">
+   		<property name="id" value="1"/>
+   		<property name="isbn" value="0553212257"/>
+   		<property name="title" value="The Sea Wolf"/>
+   		<property name="price" value="4.95"/>
+   </bean>
+   <bean id="book2" class="com.assignment1.common.Book">
+   		<property name="id" value="2"/>
+   		<property name="isbn" value="9781338299151"/>
+   		<property name="title" value="Harry Potter and the Chamber of Secrets"/>
+   		<property name="price" value="10.39"/>
+   </bean>
+	
+	
+
+	
+</beans>
